@@ -19,10 +19,11 @@ Uma instituição de ensino com cursos, disciplinas, turmas, professores, alunos
 |---|---|---|
 | `create-table.sql` | `CREATE TABLE` das tabelas principais e de relacionamento | Leandro |
 | `insert-values.sql` | `INSERT` com os dados de exemplo | Miguel |
-| `complemento-inscricao.sql` | Tabela `inscricao` (aluno x aula) e seus dados de exemplo | Grupo |
+| `complemento-inscricao.sql` | Tabela `inscricao` (aluno x aula) e seus dados de exemplo | João Pedro |
 | `SELECT.sql` | Consultas 1 a 4 | Marcos |
-| `SELECT-novos.sql` | Consultas 5 a 9 | — |
-| `DOCUMENTACAO.md` | Documentação da atividade | — |
+| `SELECT-novos.sql` | Consultas 5 a 9 | João Pedro |
+| `DOCUMENTACAO.md` | Documentação da atividade | João Pedro |
+| `README.md` | Apresentação do projeto e instruções de execução | João Pedro |
 
 ## Como executar (DB Browser for SQLite)
 
@@ -55,4 +56,4 @@ Uma instituição de ensino com cursos, disciplinas, turmas, professores, alunos
 - Leandro — `CREATE TABLE` e repositório
 - Miguel — `INSERT`
 - Marcos — SELECTs 1 a 4 e apresentação
-- (seu nome) — SELECTs 5 a 9, documentação e README
+- João Pedro — SELECTs 5 a 9, complemento da tabela `inscricao`, documentação e README

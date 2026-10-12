@@ -261,4 +261,4 @@ O SELECT 7 verifica automaticamente as regras 1, 2 e 3.
 | Leandro | `CREATE TABLE` e criação do repositório |
 | Miguel | `INSERT` |
 | Marcos | SELECTs 1 a 4 e apresentação |
-| (seu nome) | SELECTs 5 a 9, complemento, documentação e README |
+| João Pedro | SELECTs 5 a 9, complemento da tabela `inscricao`, documentação e README |
