@@ -108,10 +108,6 @@ ORDER BY
 -- as duas disciplinas, os professores, as turmas e o tipo de caso.
 -- Técnica: SELF JOIN (aulas com ela mesma) + JOINs múltiplos
 --          (campus, sala, disciplina, pessoa, turma) + CASE
--- Observação: a tabela aulas não tem dia da semana nem horário.
--- Por isso o resultado é um conflito POTENCIAL. Para confirmar,
--- faltaria criar em "aulas" as colunas dia_semana, hora_inicio e
--- hora_fim e incluir na condição do JOIN.
 -- ============================================================
 
 SELECT
@@ -216,8 +212,6 @@ ORDER BY
 -- Quantas ocorrências existem em cada verificação de integridade?
 -- Técnica: UNION ALL de várias consultas + subquery na cláusula FROM
 --          + NOT EXISTS + LEFT JOIN ... IS NULL + LIKE + CASE
--- Leitura: ocorrencias = 0 significa OK. Os itens 06, 10 e 11 devem
--- retornar valores maiores que zero com os dados atuais.
 -- ============================================================
 
 SELECT
@@ -325,8 +319,6 @@ ORDER BY
 -- Técnica: subquery na cláusula FROM (tabela derivada) + JOINs em
 --          cadeia + COUNT DISTINCT + AVG + SUM(CASE) + NULLIF +
 --          HAVING + subquery escalar + BETWEEN + CASE
--- O que falta no banco atual: tabela inscricao (aluno x aula) com
--- nota, frequência e situação, que não existe em create-table.sql.
 -- ============================================================
 
 SELECT
@@ -397,8 +389,6 @@ ORDER BY
 -- média, frequência, reprovações e a situação geral do aluno.
 -- Técnica: JOIN de 8 tabelas + subquery escalar no HAVING e no SELECT
 --          + COUNT DISTINCT + SUM + AVG + MIN + CASE + LIMIT
--- O que falta no banco atual: tabela inscricao (aluno x aula).
--- Sem ela não existe como saber quais aulas cada aluno cursa.
 -- ============================================================
 
 SELECT
