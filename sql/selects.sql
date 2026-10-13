@@ -10,13 +10,20 @@
 -- ============================================================
 
 SELECT
-    p.nome                            AS professor,
-    COUNT(DISTINCT a.id_disciplina)   AS total_disciplinas,
-    COUNT(DISTINCT a.id_turma)        AS total_turmas,
-    STRING_AGG(DISTINCT d.nome, ', ') AS disciplinas
-FROM aulas a
-JOIN pessoa     p ON p.id = a.id_professor
-JOIN disciplina d ON d.id = a.id_disciplina
+    p.nome AS professor,
+    COUNT(DISTINCT x.id_disciplina) AS total_disciplinas,
+    COUNT(DISTINCT x.id_turma) AS total_turmas,
+    STRING_AGG(x.disciplina, ', ') AS disciplinas
+FROM (
+    SELECT DISTINCT
+        a.id_professor,
+        a.id_disciplina,
+        a.id_turma,
+        d.nome AS disciplina
+    FROM aulas a
+    JOIN disciplina d ON d.id = a.id_disciplina
+) x
+JOIN pessoa p ON p.id = x.id_professor
 GROUP BY
     p.id,
     p.nome
