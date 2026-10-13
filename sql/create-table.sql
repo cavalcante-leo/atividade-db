@@ -75,3 +75,16 @@ CREATE TABLE aulas (
     FOREIGN KEY (id_professor) REFERENCES pessoa(id),
     FOREIGN KEY (id_disciplina) REFERENCES disciplina(id)
 );
+
+CREATE TABLE inscricao (
+    id INT PRIMARY KEY,
+    id_matricula INT NOT NULL,
+    id_aula INT NOT NULL,
+    nota_final DECIMAL(4,2),             
+    frequencia INT NOT NULL CHECK (frequencia BETWEEN 0 AND 100),
+    situacao VARCHAR(20) NOT NULL
+        CHECK (situacao IN ('Cursando', 'Aprovado', 'Reprovado', 'Trancado')),
+    UNIQUE (id_matricula, id_aula),
+    FOREIGN KEY (id_matricula) REFERENCES matricula(id),
+    FOREIGN KEY (id_aula) REFERENCES aulas(id)
+);

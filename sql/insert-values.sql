@@ -99,3 +99,26 @@ INSERT INTO aulas (
 (11, 4, 5, 8, 10, 'Noturno'),
 (12, 5, 7, 4, 11, 'Matutino');
 
+INSERT INTO inscricao (id, id_matricula, id_aula, nota_final, frequencia, situacao) VALUES
+-- Ana: turma 1 (Ciência da Computação, noturno)
+(1,  1, 1,  8.5, 95, 'Aprovado'),
+(2,  1, 2,  9.0, 92, 'Aprovado'),
+(3,  1, 3,  7.0, 88, 'Aprovado'),
+(4,  1, 10, 8.0, 90, 'Aprovado'),
+-- Bruno: turma 1 (reprovado por nota, por frequência, e uma nota pendente)
+(5,  2, 1,  5.5, 80, 'Reprovado'),
+(6,  2, 2,  6.5, 70, 'Reprovado'),
+(7,  2, 3,  7.5, 85, 'Aprovado'),
+(8,  2, 10, NULL, 60, 'Cursando'),
+-- Camila: turma 3 (ADS, noturno)
+(9,  3, 5,  9.5, 98, 'Aprovado'),
+-- Felipe (matrícula inativa): turma 5 (Engenharia de Software), trancou
+(10, 4, 8,  NULL, 30, 'Trancado'),
+(11, 4, 9,  NULL, 25, 'Trancado'),
+(12, 4, 12, NULL, 20, 'Trancado'),
+-- Gabriela: turma 4 (Administração, noturno)
+(13, 5, 6,  6.0, 100, 'Aprovado'),
+(14, 5, 7,  4.5, 90, 'Reprovado'),
+(15, 5, 11, 7.0, 80, 'Aprovado');
+
+
